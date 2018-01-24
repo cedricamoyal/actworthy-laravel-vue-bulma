@@ -11,7 +11,18 @@
 // Bulma
 @import "~bulma/bulma.sass";
 
-.title {
+.centerItem {
   text-align: center;
+}
+
+.mb20 {
   margin-bottom: 20px;
+}
+
+.mt20 {
+  margin-top: 20px;
+}
+
+.level:not(:last-child) {
+  margin-bottom: 0;
 }

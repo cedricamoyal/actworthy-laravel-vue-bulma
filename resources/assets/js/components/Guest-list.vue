@@ -17,21 +17,26 @@
                 </div>
 
                 <div>
-                    <h3 class="title">
+                    <h3 class="title centerItem mb20 mt20">
                             Our Guests
                     </h3>
                 </div>
                 <div class="card" v-for="guest in list">
                     <div class="card-content">
-                        <div class="content">
-                            <p>
-                                {{ guest.guestEmail }} -- {{ guest.guestPassword }}
-                            </p>
+                        <div class="columns">
+                            <div class="column is-three-quarters level">
+                                <p class="centerItem level-item">
+                                    {{ guest.guestEmail }} -- {{ guest.guestPassword }}
+                                </p>
+                            </div>
+                            <div class="column is-one-quarter level">
+                                <a class="level-item" v-on:click.prevent="deleteGuest(guest.id)">
+                                    Delete
+                                </a>
+                            </div>
                         </div>
                     </div>
-                    <footer class="card-footer">
-                        <a class="card-footer-item" v-on:click.prevent="deleteGuest(guest.id)">Delete</a>
-                    </footer>
+
                 </div>
 
             </div>

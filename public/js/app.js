@@ -13134,6 +13134,11 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     data: function data() {
@@ -13269,33 +13274,39 @@ var render = function() {
           _vm._l(_vm.list, function(guest) {
             return _c("div", { staticClass: "card" }, [
               _c("div", { staticClass: "card-content" }, [
-                _c("div", { staticClass: "content" }, [
-                  _c("p", [
-                    _vm._v(
-                      "\n                            " +
-                        _vm._s(guest.guestEmail) +
-                        " -- " +
-                        _vm._s(guest.guestPassword) +
-                        "\n                        "
+                _c("div", { staticClass: "columns" }, [
+                  _c("div", { staticClass: "column is-three-quarters level" }, [
+                    _c("p", { staticClass: "centerItem level-item" }, [
+                      _vm._v(
+                        "\n                                " +
+                          _vm._s(guest.guestEmail) +
+                          " -- " +
+                          _vm._s(guest.guestPassword) +
+                          "\n                            "
+                      )
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "column is-one-quarter level" }, [
+                    _c(
+                      "a",
+                      {
+                        staticClass: "level-item",
+                        on: {
+                          click: function($event) {
+                            $event.preventDefault()
+                            _vm.deleteGuest(guest.id)
+                          }
+                        }
+                      },
+                      [
+                        _vm._v(
+                          "\n                                Delete\n                            "
+                        )
+                      ]
                     )
                   ])
                 ])
-              ]),
-              _vm._v(" "),
-              _c("footer", { staticClass: "card-footer" }, [
-                _c(
-                  "a",
-                  {
-                    staticClass: "card-footer-item",
-                    on: {
-                      click: function($event) {
-                        $event.preventDefault()
-                        _vm.deleteGuest(guest.id)
-                      }
-                    }
-                  },
-                  [_vm._v("Delete")]
-                )
               ])
             ])
           })
@@ -13311,7 +13322,7 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", [
-      _c("h3", { staticClass: "title" }, [
+      _c("h3", { staticClass: "title centerItem mb20 mt20" }, [
         _vm._v("\n                        Our Guests\n                ")
       ])
     ])

@@ -17,4 +17,3 @@ Route::get('/', function () {
 Route::get('current_guests', 'GuestController@index');
 Route::post('create_guest', 'GuestController@store');
 Route::post('delete_guest/{id}', 'GuestController@destroy');
-Route::post('edit_guest', 'GuestController@edit');
