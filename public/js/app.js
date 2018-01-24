@@ -13138,8 +13138,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     directives: {
@@ -13151,7 +13149,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     },
     data: function data() {
         return {
-            message: 'Double click for editing.',
             list: [],
             guest: {
                 id: '',
@@ -13182,9 +13179,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             }).catch(function (err) {
                 console.log(err);
             });
-        },
-        editGuest: function editGuest(guest) {
-            this.editingGuest = guest;
         },
         deleteGuest: function deleteGuest(id) {
             var _this3 = this;
@@ -13281,31 +13275,7 @@ var render = function() {
             ])
           ]),
           _vm._v(" "),
-          _c("div", { staticClass: "tabs is-centered" }, [
-            _c("ul", [
-              _c("li", [
-                _c("h3", { staticClass: "title" }, [
-                  _c(
-                    "a",
-                    {
-                      attrs: { href: "#" },
-                      on: {
-                        click: function($event) {
-                          $event.preventDefault()
-                          _vm.fetchGuestList()
-                        }
-                      }
-                    },
-                    [
-                      _vm._v(
-                        "\n                                Our guests\n                            "
-                      )
-                    ]
-                  )
-                ])
-              ])
-            ])
-          ]),
+          _vm._m(0),
           _vm._v(" "),
           _vm._l(_vm.list, function(guest) {
             return _c("div", { staticClass: "card" }, [
@@ -13315,7 +13285,7 @@ var render = function() {
                     _vm._v(
                       "\n                            " +
                         _vm._s(guest.guestEmail) +
-                        " - " +
+                        " -- " +
                         _vm._s(guest.guestPassword) +
                         "\n                        "
                     )
@@ -13346,7 +13316,24 @@ var render = function() {
     ])
   ])
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "tabs is-centered" }, [
+      _c("ul", [
+        _c("li", [
+          _c("h3", { staticClass: "title" }, [
+            _vm._v(
+              "\n                                Our guests\n                        "
+            )
+          ])
+        ])
+      ])
+    ])
+  }
+]
 render._withStripped = true
 module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {

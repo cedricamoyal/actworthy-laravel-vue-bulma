@@ -20,9 +20,7 @@
                     <ul>
                         <li>
                             <h3 class="title">
-                                <a href="#" v-on:click.prevent="fetchGuestList()">
                                     Our guests
-                                </a>
                             </h3>
                         </li>
                     </ul>
@@ -31,7 +29,7 @@
                     <div class="card-content">
                         <div class="content">
                             <p>
-                                {{ guest.guestEmail }} - {{ guest.guestPassword }}
+                                {{ guest.guestEmail }} -- {{ guest.guestPassword }}
                             </p>
                         </div>
                     </div>
@@ -56,7 +54,6 @@
         },
         data() {
             return {
-                message: 'Double click for editing.',
                 list: [],
                 guest: {
                     id: '',
@@ -82,9 +79,6 @@
                 }).catch(err => {
                     console.log(err);
                 });
-            },
-            editGuest(guest) {
-                this.editingGuest = guest;
             },
             deleteGuest(id) {
                 axios.post('delete_guest/' + id).then(result => {

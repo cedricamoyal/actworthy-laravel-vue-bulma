@@ -16,15 +16,8 @@ class GuestController extends Controller
             'guestEmail' => 'required',
             'guestPassword' => 'required'
         ]);
-        return Guest::create(['guestEmail' => request('guestEmail'), 'guestPassword' => request('guestPassword')]);
-    }
-    public function edit(Request $request)
-    {
-        $this->validate($request, [
-            'guestEmail' => 'required',
-            'guestPassword' => 'required'
-        ]);
-        $guest = Guest::findOrFail($request->id);
+
+        $guest = new Guest;
         $guest->guestEmail = $request->guestEmail;
         $guest->guestPassword = $request->guestPassword;
         $guest->save();
