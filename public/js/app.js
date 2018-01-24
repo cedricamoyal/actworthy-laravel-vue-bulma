@@ -13134,19 +13134,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-//
-//
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-    directives: {
-        'autofocus': {
-            inserted: function inserted(el) {
-                el.focus();
-            }
-        }
-    },
     data: function data() {
         return {
             list: [],
@@ -13321,15 +13310,9 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "tabs is-centered" }, [
-      _c("ul", [
-        _c("li", [
-          _c("h3", { staticClass: "title" }, [
-            _vm._v(
-              "\n                                Our guests\n                        "
-            )
-          ])
-        ])
+    return _c("div", [
+      _c("h3", { staticClass: "title" }, [
+        _vm._v("\n                        Our Guests\n                ")
       ])
     ])
   }

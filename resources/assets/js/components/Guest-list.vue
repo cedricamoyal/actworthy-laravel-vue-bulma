@@ -16,14 +16,10 @@
                     </div>
                 </div>
 
-                <div class="tabs is-centered">
-                    <ul>
-                        <li>
-                            <h3 class="title">
-                                    Our guests
-                            </h3>
-                        </li>
-                    </ul>
+                <div>
+                    <h3 class="title">
+                            Our Guests
+                    </h3>
                 </div>
                 <div class="card" v-for="guest in list">
                     <div class="card-content">
@@ -45,13 +41,6 @@
 
 <script>
     export default {
-        directives: {
-            'autofocus': {
-                inserted(el) {
-                    el.focus();
-                }
-            }
-        },
         data() {
             return {
                 list: [],
